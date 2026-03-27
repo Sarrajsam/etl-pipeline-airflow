@@ -1,26 +1,78 @@
-# etl-pipeline-airflow
-## Files
-- `people_dag.py` → Main Airflow DAG
-- `W3SVC1 (1).zip` → Raw input data
-- `README.md` → Project documentation
+# ETL Pipeline with Apache Airflow
 
-## Key Learning Outcomes
-- Building ETL workflows with Airflow
-- Using `BashOperator` and `PythonOperator`
-- Automating data transformation steps
-- Structuring data for analytics and reporting
+This project demonstrates a simple ETL pipeline built using Apache Airflow and Python to process raw data files and prepare them for analytics.
 
-## Future Improvements
-- Add better logging and error handling
-- Parameterize file paths
-- Load transformed data into a database automatically
-- Add dashboard screenshots and pipeline diagram
+The pipeline automates the Extract → Transform → Load workflow using Airflow operators.
 
-## Tools
+---
+
+## Project Overview
+
+The goal of this project is to simulate a real data engineering workflow where raw log / CSV data is processed automatically and prepared for reporting and analysis.
+
+The pipeline performs the following steps:
+
+1. Download raw data file
+2. Transform the data using Python
+3. Save the cleaned data to a new file
+4. Move the processed data for further use
+
+---
+
+## Airflow DAG Workflow
+
+The DAG contains three tasks:
+
+- download_data → BashOperator
+- transform → PythonOperator
+- copy → BashOperator
+
+Workflow order:
+
+download_data >> transform >> copy
+
+---
+
+## Technologies Used
+
 - Python
 - Apache Airflow
-- CSV
-- ETL pipeline
+- CSV files
+- ETL pipeline design
+- BashOperator
+- PythonOperator
+
+---
+
+## Files
+
+people_dag.py → Main Airflow DAG  
+README.md → Documentation  
+Input CSV file → Raw data source  
+
+---
+
+## What I learned
+
+- Building ETL workflows with Airflow
+- Writing DAGs in Python
+- Automating data pipelines
+- Transforming CSV data programmatically
+- Structuring data for analytics
+
+---
+
+## Future Improvements
+
+- Load data into PostgreSQL
+- Add logging and error handling
+- Use environment variables
+- Add Power BI dashboard
+- Create full data warehouse pipeline
+
+---
 
 ## Author
-Sarraj Alsammak
+
+Sarraj Alsammak  
+MSc Data Science & Engineering
