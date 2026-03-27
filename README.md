@@ -1,10 +1,20 @@
 # etl-pipeline-airflow
-## You can find the Row data in the file which named as W3SVC1 (1).zip
+## Files
+- `people_dag.py` → Main Airflow DAG
+- `W3SVC1 (1).zip` → Raw input data
+- `README.md` → Project documentation
 
-## Steps
-- Download data using BashOperator
-- Transform data using PythonOperator
-- Copy output file to DAG folder
+## Key Learning Outcomes
+- Building ETL workflows with Airflow
+- Using `BashOperator` and `PythonOperator`
+- Automating data transformation steps
+- Structuring data for analytics and reporting
+
+## Future Improvements
+- Add better logging and error handling
+- Parameterize file paths
+- Load transformed data into a database automatically
+- Add dashboard screenshots and pipeline diagram
 
 ## Tools
 - Python
